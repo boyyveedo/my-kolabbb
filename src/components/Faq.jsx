@@ -25,21 +25,22 @@ const Faq = () => {
     };
 
     return (
-        <div className="w-full h-[518px] flex flex-col items-center justify-center gap-[32px] mt-[20px] pb-[74px]">
-            <h2 className="font-[600] text-[48px] leading-[58px] text-center mb-2 h-[58px]">FAQs</h2>
-            <div className="w-[1076px] max-w-full h-[332px] space-y-[64px] items-center">
+        <div className="w-full h-auto flex flex-col items-center justify-center gap-[32px] mt-[20px] pb-[74px] px-4 sm:px-0">
+            <h2 className="font-[600] text-[32px] sm:text-[48px] leading-[40px] sm:leading-[58px] text-center mb-2 h-[58px]">
+                FAQs
+            </h2>
+            <div className="w-full sm:w-[1076px] max-w-full h-auto space-y-[32px] sm:space-y-[64px] items-center">
                 {faqData.map((faq, index) => (
                     <div key={index} className="border-b">
                         <div
                             onClick={() => toggleFaq(index)}
                             className={`cursor-pointer flex justify-between items-center p-4 ${openIndex === index ? 'bg-neutralLight' : 'bg-neutralLemon'} text-green-900 rounded-md`}
                         >
-                            <span className="text-[24px] font-[600] leading-[32px] font-DM-Sans">
+                            <span className="text-[20px] sm:text-[24px] font-[600] leading-[28px] sm:leading-[32px] font-DM-Sans">
                                 {faq.question}
                             </span>
                             <span
-                                className={`transition-transform duration-300 ease-in-out text-xl bg-neutralPrimary text-white rounded-full w-[32px] h-[32px] flex justify-center items-center transform ${openIndex === index ? 'rotate-180' : 'rotate-0'
-                                    }`}
+                                className={`transition-transform duration-300 ease-in-out text-xl bg-neutralPrimary text-white rounded-full w-[32px] h-[32px] flex justify-center items-center transform ${openIndex === index ? 'rotate-180' : 'rotate-0'}`}
                             >
                                 {openIndex === index ? 'X' : '+'}
                             </span>

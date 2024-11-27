@@ -6,6 +6,16 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        'slide-left-right': 'slideLeftRight 4s ease-in-out infinite',
+      },
+      keyframes: {
+        slideLeftRight: {
+          '0%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(-20px)' },  // You can adjust this value for the amount of movement
+          '100%': { transform: 'translateX(0)' },
+        }
+      },
       colors: {
         'neutralPrimary': '#003930',
         'neutralWhite': '#E6EBEA',
