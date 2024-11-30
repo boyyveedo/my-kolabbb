@@ -1,5 +1,6 @@
 
 import './App.css'
+import './style.css'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Faq from './components/Faq'

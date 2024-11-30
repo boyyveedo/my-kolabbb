@@ -29,17 +29,18 @@ const Navbar = () => {
         <div className="w-full overflow-x-hidden">
             {/* Navbar */}
             <header
-                className={`w-full h-[80px] lg:h-[104px] bg-gray-100 top-0 px-4 lg:px-[180px] flex justify-between items-center ${isSticky ? ' top-0 left-0 z-50 shadow-md' : ''}`}
+                className={`w-full h-[80px] lg:h-[104px] bg-gray-100 top-0 px-4 lg:px-[180px] flex justify-between items-center ${isSticky ? ' top-0 left-0 z-50 shadow-md' : ''
+                    }`}
             >
                 {/* Logo */}
                 <a href="#" className="flex items-center">
-                    <img src={Logo} alt="Logo" className="h-[22px] lg:h-auto w-auto ml-4" />
+                    <img src={Logo} alt="Logo" className="h-[22px] lg:h-auto w-auto sm:h-[30px] md:h-[40px] xl:h-[50px] ml-4 sm:ml-2 md:ml-4" />
                 </a>
 
                 {/* Desktop Button */}
                 <div className="hidden lg:flex items-center w-[159px] h-[56px]">
                     <button className="bg-neutralPrimary text-white py-2 px-4 transition-all duration-300 rounded-md">
-                        Sign up for free
+                        Join the Waitlist
                     </button>
                 </div>
 
@@ -58,27 +59,24 @@ const Navbar = () => {
                 </div>
             </header>
 
+            {/* Mobile Dimensions */}
+            <style jsx>{`
+                @media (max-width: 1024px) {
+                    header {
+                        width: 100% !important;
+                        height: 44px !important;
+                        padding-top: 16px !important;
+                        padding-bottom: 16px !important;
+                    }
+                }
+            `}</style>
+
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="absolute top-[80px] left-0 w-full bg-gray-100 z-50 shadow-lg">
+                <div className="absolute top-[80px] left-0 w-full h-[322px] bg-gray-100 z-50 shadow-lg">
                     <ul className="flex flex-col items-center py-4">
                         <li className="py-2">
-                            <a href="#" className="text-gray-700 hover:text-neutralPrimary">
-                                Home
-                            </a>
-                        </li>
-                        <li className="py-2">
-                            <a href="#" className="text-gray-700 hover:text-neutralPrimary">
-                                Features
-                            </a>
-                        </li>
-                        <li className="py-2">
-                            <a href="#" className="text-gray-700 hover:text-neutralPrimary">
-                                About
-                            </a>
-                        </li>
-                        <li className="py-2">
-                            <button className="bg-neutralPrimary text-white py-2 px-4 rounded-md">
+                            <button className="bg-neutralPrimary text-white py-2 mt-[50px] px-4 rounded-md">
                                 Sign up for free
                             </button>
                         </li>
