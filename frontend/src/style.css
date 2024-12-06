@@ -3,7 +3,11 @@
 @media (max-width: 768px) {
     .custom-section {
         height: 1100px; /* Increase the height for mobile */
+        gap: 100px
+        
     }
+
+    .c
       .remove-mobile-margin {
         margin-top: 0 !important; /* Remove space on mobile */
     }
@@ -13,7 +17,10 @@
     .custom-description {
         font-size: 16px; /* Adjust font size for mobile */
         line-height: 24px; /* Adjust line height */
+        width: 100%; 
     }
+
+    
 
     .custom-section .gap-reduced {
         gap: 1px; /* Reduce the gap for mobile */
@@ -43,7 +50,7 @@
 .custom-container {
     height: 250px;
     background-color: #f3f4f6; /* bg-gray-100 */
-    padding: 0 16px;
+    padding: 32px 16px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,6 +79,8 @@
     font-weight: 600;
     line-height: 26px;
     font-size: 24px; /* Adjusted size for mobile */
+    
+ 
 }
 
 .custom-image-section {
@@ -135,7 +144,18 @@
 }
 
 
+.main-heading{
+    padding: 32px 16px;
+}
 
+.cus-des{
+    width:340px;
+    height: 60px;
+}
+.des-title{
+  width:340px;
+    height: 76px;   
+}
 
 
    
@@ -180,6 +200,7 @@
 
     .description {
         width: 100%; /* Full width for better fitting */
+        
     }
 
     .description-text {
@@ -188,10 +209,12 @@
     }
 
     .input-field {
-        width: 100%; /* Full width input */
-        height: 50px; /* Adjust input height */
+width: 298px
     }
 
+    
+
+    
     .action-button {
         width: 100%; /* Full width button */
         height: 50px; /* Adjust button height */
@@ -203,6 +226,24 @@
         flex-wrap: wrap; /* Ensure items wrap */
     }
 
-    
+ .hero{
+    height: 360px;
+  
+ } 
+ 
+ .her{
+    margin-bottom: 100px
+ }
+
+ .foot{
+    margin-top: 50px
+ }
     
 }
+
+
+
+
+
+
+

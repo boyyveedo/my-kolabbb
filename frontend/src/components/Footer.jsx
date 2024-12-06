@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="w-full h-auto flex items-center justify-center flex-col sm:flex-row gap-[32px] sm:gap-[122px] px-[16px] sm:px-[72px] py-[24px] bg-gray-100 text-neutralPrimary">
             {/* Logo Section */}
-            <div className="flex items-center justify-center w-full sm:w-auto">
+            <div className="flex items-center foot justify-center w-full sm:w-auto">
                 <img
                     src={Logo}
                     alt="Logo"

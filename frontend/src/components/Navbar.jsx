@@ -11,13 +11,15 @@ const Navbar = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    // Create a ref for the input section in Home
+    const scrollToInput = () => {
+        const element = document.getElementById("waitlist-input");
+        element?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 100) {
-                setIsSticky(true);
-            } else {
-                setIsSticky(false);
-            }
+            setIsSticky(window.scrollY > 100);
         };
         window.addEventListener('scroll', handleScroll);
         return () => {
@@ -26,20 +28,27 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className="w-full overflow-x-hidden">
+        <div
+            className={`w-full ${isSticky ? 'top-0 shadow-md z-50' : ''} ${isMenuOpen ? 'bg-neutralWhite' : 'bg-gray-100'
+                }`}
+        >
             {/* Navbar */}
             <header
-                className={`w-full h-[80px] lg:h-[104px] bg-gray-100 top-0 px-4 lg:px-[180px] flex justify-between items-center ${isSticky ? ' top-0 left-0 z-50 shadow-md' : ''
-                    }`}
+                className="max-w-[1440px] w-full h-[104px] flex justify-between items-center px-4 md:px-12 lg:px-[72px] mx-auto"
             >
                 {/* Logo */}
-                <a href="#" className="flex items-center">
-                    <img src={Logo} alt="Logo" className="h-[22px] lg:h-auto w-auto sm:h-[30px] md:h-[40px] xl:h-[50px] ml-4 sm:ml-2 md:ml-4" />
-                </a>
+                <div className="w-[110.5px] h-[25.12px]">
+                    <a href="#">
+                        <img src={Logo} alt="Logo" />
+                    </a>
+                </div>
 
                 {/* Desktop Button */}
-                <div className="hidden lg:flex items-center w-[159px] h-[56px]">
-                    <button className="bg-neutralPrimary text-white py-2 px-4 transition-all duration-300 rounded-md">
+                <div className="hidden lg:block w-[166px]">
+                    <button
+                        onClick={scrollToInput}
+                        className="bg-neutralPrimary rounded-md px-4 py-3 text-white transition-all duration-300"
+                    >
                         Join the Waitlist
                     </button>
                 </div>
@@ -59,25 +68,19 @@ const Navbar = () => {
                 </div>
             </header>
 
-            {/* Mobile Dimensions */}
-            <style jsx>{`
-                @media (max-width: 1024px) {
-                    header {
-                        width: 100% !important;
-                        height: 44px !important;
-                        padding-top: 16px !important;
-                        padding-bottom: 16px !important;
-                    }
-                }
-            `}</style>
-
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="absolute top-[80px] left-0 w-full h-[322px] bg-gray-100 z-50 shadow-lg">
-                    <ul className="flex flex-col items-center py-4">
+                <div className="absolute top-[104px] left-0 w-full h-[360px] bg-neutralWhite z-50 shadow-lg">
+                    <ul className="flex flex-col items-center py-6">
                         <li className="py-2">
-                            <button className="bg-neutralPrimary text-white py-2 mt-[50px] px-4 rounded-md">
-                                Sign up for free
+                            <button
+                                onClick={() => {
+                                    scrollToInput();
+                                    toggleMenu();
+                                }}
+                                className="bg-neutralPrimary mt-[80px] text-white px-6 py-3 rounded-md"
+                            >
+                                Join the Waitlist
                             </button>
                         </li>
                     </ul>
