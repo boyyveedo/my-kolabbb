@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer');
 require('dotenv').config();
+const logger = require('../logger/index')
 
 
 // Define sendConfirmationEmail function
@@ -9,8 +10,8 @@ const sendConfirmationEmail = async (email, username) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail', // For Gmail (You can use any other service)
         auth: {
-            user: process.env.EMAIL_USER,  // Your email here
-            pass: process.env.EMAIL_PASS,  // Your email password here
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS,
         },
     });
 
@@ -35,9 +36,9 @@ const sendConfirmationEmail = async (email, username) => {
 
     try {
         await transporter.sendMail(mailOptions);
-        console.log('Confirmation email sent successfully!');
+        logger.info('Confirmation email sent successfully!');
     } catch (error) {
-        console.error('Error sending confirmation email:', error);
+        logger.error('Error sending confirmation email:', error);
         throw error; // Propagate the error if email sending fails
     }
 };

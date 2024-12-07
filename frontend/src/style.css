@@ -1,25 +1,146 @@
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 0;
+    margin: 0 auto; 
+    transform: translateY(-80px); /* Push the container up by 20px */
 
-/* Mobile-specific styles */
-@media (max-width: 768px) {
-    .custom-section {
-        height: 1100px; /* Increase the height for mobile */
-        gap: 100px
+
+}
+
+@media (min-width: 769px) {
+    .mobile-line-break {
+        display: none; /* Hide line break on desktop */
+    }
+}
+
+@media (max-width: 768px){
+.custom-section {
+        height: 270px; /* Increase the height for mobile */    
+        width:  360px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: relative;
+         margin-top: 20px;
         
     }
 
-    .c
-      .remove-mobile-margin {
+    .mobile-left{
+    position: absolute;
+    width: 56px;
+    height: 65.53px;
+    top: 79px;
+    left: 10px;
+    radius:4.55px;
+    }
+
+    .text-content{
+    position: absolute;
+    width: 168px;
+    height: 84px;
+    top: 98px;
+    left: 96px;
+    gap: 48px;
+   
+
+    }
+
+    .text-content-main{
+    font-weight: bold;
+    color: #2b2b2b; /* text-neutralPrimary */
+    font-size: 20px;
+    align-items: center;
+    height: 84px;
+    line-height: 28px;
+    
+
+    } 
+
+    .desc{
+    position: absolute ;
+    width: 168px;
+    height: 48px;
+    top: 98px;
+    left: 96px ;
+    margin-top: 98px;
+    }
+
+    .desc-main{
+     font-weight: 500px;
+    font-size: 10px;
+    height: 48px;
+    line-height: 16px;
+    letter-space: 1.5%;
+    }
+
+    .btn{
+     margin-top: 20px;  
+    width: 148px;
+    height: 40.31px;
+    top: 254px;
+    left: 106px;
+    position: absolute;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    radius: 6.58px;
+
+    }
+
+    .btn-main{
+  padding: 13.16px 9.87px;
+    
+    }
+   
+    .mobile-right{
+    position: absolute;
+    width: 56px;
+    height: 65.53px;
+    top: 130px;
+    left:300px;
+    radius: 4.55px;
+    }
+
+ .remove-mobile-margin {
         margin-top: 0 !important; /* Remove space on mobile */
     }
 
-    .custom-title,
-    .custom-subtitle,
-    .custom-description {
+    
+    .custom-subtitle{
         font-size: 16px; /* Adjust font size for mobile */
-        line-height: 24px; /* Adjust line height */
+        line-height: 26px; /* Adjust line height */
         width: 100%; 
     }
 
+.custom-description{
+font-size: 14px;
+width: 340px;
+line-height: 24px; /* Adjust line height */
+height: 60px;
+font-weight: 500px;
+}
+
+.custom-title{
+font-size: 12px;
+    margin-top: -30px; /* Negative margin to move the button further up */
+    font-weight: 600px;
+
+}
+
+.card-card{
+    margin-top: -50px; /* Negative margin to move the button further up */
+
+}
+   
+.card-div{
+height: 1050px;
+}
+
+.custom-button {
+    margin-top: -30px; /* Negative margin to move the button further up */
+}
     
 
     .custom-section .gap-reduced {
@@ -157,6 +278,34 @@
     height: 76px;   
 }
 
+.footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 226.93px;
+        gap: 24px;
+       
+
+    }
+
+    .footer-logo {
+        margin-right: 0; /* Remove the margin on the right */
+        
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 16px; 
+        align-items: center;
+    }
+
+    .footer-link h5 {
+        font-size: 18px; /* Slightly smaller font for mobile */
+        line-height: 24px;
+    }
+
 
    
 
@@ -239,6 +388,322 @@ width: 298px
     margin-top: 50px
  }
     
+}
+
+
+
+@media (max-width: 480px){
+
+
+}
+
+
+/* Media query for iPhone XR (414px wide) */
+@media (width: 390px) {
+    /* Your styles specific to iPhone XR */
+  .custom-section {
+        height: 270px; /* Increase the height for mobile */    
+        width:  360px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: relative;
+         margin-top: 20px;
+         left: -10px;
+         
+        
+    },
+
+.mobile-left{
+    position: absolute;
+    width: 56px;
+    height: 65.53px;
+    top: 79px;
+    left: 10px;
+    radius:4.55px;
+    }
+
+    .text-content{
+    position: absolute;
+    width: 168px;
+    height: 84px;
+    top: 98px;
+    left: 110px;
+    gap: 48px;
+   
+
+    }
+
+    .text-content-main{
+    font-weight: bold;
+    color: #2b2b2b; /* text-neutralPrimary */
+    font-size: 20px;
+    align-items: center;
+    height: 84px;
+    line-height: 28px;
+    
+
+    } 
+
+    .desc{
+    position: absolute ;
+    width: 168px;
+    height: 48px;
+    top: 98px;
+    left: 110px ;
+    margin-top: 98px;
+    }
+
+    .desc-main{
+     font-weight: 500px;
+    font-size: 10px;
+    height: 48px;
+    line-height: 16px;
+    letter-space: 1.5%;
+    }
+
+    .btn{
+     margin-top: 20px;  
+    width: 148px;
+    height: 40.31px;
+    top: 254px;
+    left: 123px;
+    position: absolute;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    radius: 6.58px;
+
+    }
+
+    .btn-main{
+  padding: 13.16px 9.87px;
+    
+    }
+   
+    .mobile-right{
+    position: absolute;
+    width: 56px;
+    height: 65.53px;
+    top: 130px;
+    left:313px;
+    radius: 4.55px;
+    }
+
+
+    
+    .text-content-main {
+        font-size: 18px;
+    }
+    
+    .desc-main {
+        font-size: 12px;
+    }
+}
+
+/* Media query for iPhone 12 Pro (390px wide) */
+@media (width: 414px) {
+    .custom-section {
+        height: 270px; /* Increase the height for mobile */    
+        width:  360px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: relative;
+         margin-top: 20px;
+         left: -15px;
+         
+        
+    },
+
+.mobile-left{
+    position: absolute;
+    width: 56px;
+    height: 65.53px;
+    top: 79px;
+    left: 10px;
+    radius:4.55px;
+    }
+
+    .text-content{
+    position: absolute;
+    width: 168px;
+    height: 84px;
+    top: 98px;
+    left: 110px;
+    gap: 48px;
+   
+
+    }
+
+    .text-content-main{
+    font-weight: bold;
+    color: #2b2b2b; /* text-neutralPrimary */
+    font-size: 20px;
+    align-items: center;
+    height: 84px;
+    line-height: 28px;
+    
+
+    } 
+
+    .desc{
+    position: absolute ;
+    width: 168px;
+    height: 48px;
+    top: 98px;
+    left: 110px ;
+    margin-top: 98px;
+    }
+
+    .desc-main{
+     font-weight: 500px;
+    font-size: 10px;
+    height: 48px;
+    line-height: 16px;
+    letter-space: 1.5%;
+    }
+
+    .btn{
+     margin-top: 20px;  
+    width: 148px;
+    height: 40.31px;
+    top: 254px;
+    left: 123px;
+    position: absolute;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    radius: 6.58px;
+
+    }
+
+    .btn-main{
+  padding: 13.16px 9.87px;
+    
+    }
+   
+    .mobile-right{
+    position: absolute;
+    width: 56xpx;
+    height: 70.53px;
+    top: 130px;
+    left:326px;
+    radius: 4.55px;
+    }
+
+
+    
+    .text-content-main {
+        font-size: 18px;
+    }
+    
+    .desc-main {
+        font-size: 12px;
+    }
+}
+
+/* Media query for iPhone 14 Pro (430px wide) */
+@media (width: 430px) {
+    /* Your styles specific to iPhone 14 Pro */
+    .custom-section {
+        height: 270px; /* Increase the height for mobile */    
+        width:  250px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: relative;
+         margin-top: 20px;
+         left: -80px;
+         
+        
+    },
+
+.mobile-left{
+    position: absolute;
+    width: 56px;
+    height: 65.53px;
+    top: 79px;
+    left: 10px;
+    radius:4.55px;
+    }
+
+    .text-content{
+    position: absolute;
+    width: 168px;
+    height: 84px;
+    top: 98px;
+    left: 130px;
+  ;
+   
+
+    }
+
+    .text-content-main{
+    font-weight: bold;
+    color: #2b2b2b; /* text-neutralPrimary */
+    font-size: 20px;
+    align-items: center;
+    height: 84px;
+    line-height: 28px;
+    
+
+    } 
+
+    .desc{
+    position: absolute ;
+    width: 168px;
+    height: 48px;
+    top: 98px;
+    left: 130px ;
+    margin-top: 98px;
+    }
+
+    .desc-main{
+     font-weight: 500px;
+    font-size: 10px;
+    height: 48px;
+    line-height: 16px;
+    letter-space: 1.5%;
+    }
+
+    .btn{
+     margin-top: 20px;  
+    width: 148px;
+    height: 40.31px;
+    top: 254px;
+    left: 136px;
+    position: absolute;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    radius: 6.58px;
+
+    }
+
+    .btn-main{
+  padding: 13.16px 9.87px;
+    
+    }
+   
+    .mobile-right{
+    position: absolute;
+    width: 56xpx;
+    height: 70.53px;
+    top: 130px;
+    left:350px;
+    radius: 4.55px;
+    }
+
+
+    
+    .text-content-main {
+        font-size: 18px;
+    }
+    
+    .desc-main {
+        font-size: 12px;
+    }
 }
 
 

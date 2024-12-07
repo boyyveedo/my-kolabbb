@@ -26,6 +26,10 @@ export default {
         'neutralIndi': '#FBFFE6',
         'neutralHue': '#96AEAA',
         'neutralLight': '#6B8C87',
+        'neutralSemantic': '#E9EBF8',
+        'neutralSema': '#8E98A8',
+
+
       }
     },
   },

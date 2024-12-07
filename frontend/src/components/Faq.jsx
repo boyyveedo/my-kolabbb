@@ -25,7 +25,7 @@ const Faq = () => {
     };
 
     return (
-        <div className="w-full h-auto flex flex-col items-center justify-center gap-[32px] mt-[20px] pb-[74px] px-4 sm:px-0">
+        <div className="w-full h-auto flex flex-col items-center justify-center gap-[32px] pt-[20px] pb-[74px] px-4 sm:px-0 bg-neutralSemantic" >
             <h2 className="font-[600] text-[32px] sm:text-[48px] leading-[40px] sm:leading-[58px] text-center mb-2 h-[58px]">
                 FAQs
             </h2>

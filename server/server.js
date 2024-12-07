@@ -7,12 +7,16 @@ const logger = require('./logger/index')
 const redisClient = require('./cache/redis')
 const WaitlistSubscriptionValidationMw = require('./validator/subscriber.validator')
 const rateLimit = require('express-rate-limit');
+const helmet = require('helmet');
+
 
 
 
 
 const app = express()
 
+
+app.use(helmet());
 
 
 app.use(cors({
@@ -34,7 +38,7 @@ app.use(morgan('dev'));
 // Rate limiter setup with in-memory store (default)
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000,  // 15 minutes
-    max: 100,                  // Allow only 100 requests per IP per 15 minutes
+    max: 5,                  // Allow only 100 requests per IP per 15 minutes
     message: 'Too many requests from this IP, please try again later.',
     headers: true,             // Include rate limit headers in the response
 });
@@ -42,6 +46,7 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.get('/', (req, res) => {
+    logger.info('Home route accessed');
     res.send('welcome to Kolabbb')
 })
 app.use('/api/v1/', WaitlistSubscriptionValidationMw, subscriberRoutes);
@@ -57,11 +62,11 @@ const start = async () => {
     try {
         await connectDB(process.env.MONGO_URI);  // Connect to DB
         app.listen(PORT, () => {
-            console.log(`Server is running on PORT: ${PORT}`);
-            console.log("Connected successfully to MongoDB");
+            logger.info(`Server is running on PORT: ${PORT}`);
+            logger.info("Connected successfully to MongoDB");
         });
     } catch (error) {
-        console.error(error);
+        logger.error(error);
         process.exit(1);
     }
 };

@@ -29,7 +29,7 @@ const Navbar = () => {
 
     return (
         <div
-            className={`w-full ${isSticky ? 'top-0 shadow-md z-50' : ''} ${isMenuOpen ? 'bg-neutralWhite' : 'bg-gray-100'
+            className={`w-full ${isSticky ? 'top-0 shadow-md z-50' : ''} ${isMenuOpen ? 'bg-neutralIndi' : 'bg-neutralSemantic'
                 }`}
         >
             {/* Navbar */}
@@ -70,7 +70,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="absolute top-[104px] left-0 w-full h-[360px] bg-neutralWhite z-50 shadow-lg">
+                <div className="absolute top-[104px] left-0 w-full h-[290px]  bg-neutralIndi z-50 shadow-lg">
                     <ul className="flex flex-col items-center py-6">
                         <li className="py-2">
                             <button

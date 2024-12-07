@@ -54,83 +54,80 @@ const Home = () => {
     };
 
     return (
-        <div className={`w-screen bg-gray-100 overflow-x-hidden transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+        <div className={`w-screen bg-neutralSemantic overflow-x-hidden transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
             {/* Main Content (Centered) */}
-            <div className="flex items-center justify-center hero sm:h-[752px] px-4 sm:px-0">
-                <div className="her relative w-full h-[360px] sm:h-[752px] sm:w-[1440px] sm:top-[-70px]">
-                    {/* Top Left Image */}
-                    <div className="absolute top-[79px] left-[14px] sm:top-[150px] sm:left-[72px] w-[56px] h-[64px] sm:w-[174.14px] sm:h-[215.25px]">
-                        <div className="rounded-lg overflow-hidden">
-                            <img
-                                src={videographer}
-                                alt="Videographer"
-                                className="w-full h-full object-cover"
-                                loading="lazy"
-                            />
-                        </div>
+            <div className=" custom-section hero-container relative w-[1440px] h-[762px] flex justify-center items-center   ">
+
+                {/* Top Left Image */}
+                <div className=" mobile-left absolute w-[174.14px] h-[215.25px] top-[150px] left-[72px] rounded-[8px]">
+                    <div className="rounded-lg overflow-hidden ">
+                        <img
+                            src={videographer}
+                            alt="Videographer"
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                        />
                     </div>
+                </div>
 
-                    {/* Center Content */}
-                    <div className="absolute top-[100px] sm:top-[168px] left-[20px] sm:left-[331px] w-[320px] sm:w-[783px] h-auto flex flex-col items-center justify-center">
-                        {/* Center Content */}
-                        <div className="w-[168px] sm:w-full h-auto">
-                            <h1 className="text-[20px] sm:text-[96px] font-bold leading-[28px] sm:leading-[114px] text-neutralPrimary text-center">
-                                Where artists
-                                <br /> and creatives collaborate
-                            </h1>
-                        </div>
+                {/* Center Content */}
+                <div className=" text-content w-[584px] h-[342px] absolute top-[168px] left-[430px] text-center">
+                    <h1 className="text-content-main text-[96px] leading-[114px] font-bold tracking-[-1.5%] text-neutralPrimary">
+                        Where artists
+                        <br /> and creatives collaborate
+                    </h1>
+                </div>
 
-                        {/* Description */}
-                        <div className="mt-2 sm:mt-8 w-[152px] sm:w-full h-auto">
-                            <p className="text-[10px] sm:text-[28px] font-medium leading-[16px] sm:leading-[36px] tracking-[0.015em] text-center">
-                                Find and collaborate with top creatives
-                                <br /> for your music projects on Kolabbb.
-                            </p>
-                        </div>
-                    </div>
+                {/* Description */}
+                <div className="desc w-[507px] h-[72px] absolute top-[542px] left-[467px] text-center">
+                    <h4 className="desc-main font-medium text-[28px] leading-[36px]">
+                        Find and collaborate with top creatives
+                        for your music <br class="mobile-line-break" />  projects on Kolabbb.
+                    </h4>
+                </div>
 
-                    {/* Button */}
-                    <div className="absolute top-[300px] left-[60px] sm:top-[646px] sm:left-[600px] w-[240px] sm:w-[240px] h-[40px] sm:h-[56px] flex items-center justify-center">
-                        <button
-                            onClick={() => {
-                                inputSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
-                            }}
-                            className="bg-neutralPrimary text-white text-center font-medium rounded-md px-[8px] py-[8px] sm:px-[12px] sm:py-[16px]"
-                        >
-                            Get Early Access
-                        </button>
-                    </div>
+                {/* Button */}
+                <div className="btn absolute top-[646px] left-[600px] w-[240px] h-[56px] flex items-center justify-center">
+                    <button
+                        onClick={() => {
+                            inputSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className="bg-neutralPrimary btn-main text-white text-center font-medium rounded-md px-[12px] py-[16px]"
+                    >
+                        Get Early Access
+                    </button>
+                </div>
 
-                    {/* Bottom Right Image */}
-                    <div className="absolute top-[130px] left-[280px] sm:top-[355px] sm:left-[1198px] w-[56px] h-[64px] sm:w-[174.14px] sm:h-[215.25px]">
-                        <div className="rounded-lg overflow-hidden">
-                            <img
-                                src={music_producer}
-                                alt="Music Producer"
-                                className="w-full h-full object-cover"
-                                loading="lazy"
-                            />
-                        </div>
+                {/* Bottom Right Image */}
+                <div className="mobile-right absolute w-[174.14px] h-[215.25px] top-[355px] left-[1194px] rounded-[8px]">
+                    <div className="rounded-lg overflow-hidden">
+                        <img
+                            src={music_producer}
+                            alt="Music Producer"
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                        />
                     </div>
                 </div>
             </div>
 
+
             {/* New Section with Own Background Color */}
-            <div className="custom-section w-full bg-neutralPrimary py-[64px]">
-                <div className="flex flex-col items-center gap-reduced w-[80%] sm:w-[769px] mx-auto h-[210px]">
+            <div className=" w-full bg-neutralPrimary py-[64px] card-div">
+                <div className="div-2 flex flex-col items-center gap-reduced w-[80%] sm:w-[769px] mx-auto h-[210px]">
                     {/* Title */}
                     <p className="custom-title text-center font-[700] pb-[40px] text-neutralGreen text-[14px] leading-[20px] tracking-[1.25%] w-[300px] h-[20px]">
                         Reasons to believe in kolabbb
                     </p>
 
                     {/* Subtitle */}
-                    <h2 className="custom-subtitle text-center font-[600] text-[32px] sm:text-[48px] leading-[44px] sm:leading-[58px] text-neutralWhite w-full sm:w-[769px] mb-[2px]">
+                    <h2 className="custom-subtitle text-center font-[600] text-[48px] leading-[44px] sm:leading-[58px] text-neutralWhite w-full sm:w-[769px] mb-[2px]">
                         Everything you need for your music's success is right here.
                     </h2>
 
                     {/* Description */}
                     <div className='cus-des'>
-                        <p className="custom-description text-center font-[500] text-[14px] sm:text-[16px] leading-[24px] tracking-[0.5%] text-gray-400 w-[557px] h-[48px]  mt-[2px]">
+                        <p className="custom-description text-center font-[500]  text-[16px] leading-[24px] tracking-[0.5%] text-white w-[557px] h-[48px]  mt-[2px]">
                             Streamline every step of your collaboration, from
                             connection to creation. Kolabbb makes it faster,
                             easier, and seamless
@@ -139,7 +136,7 @@ const Home = () => {
                 </div>
 
                 {/* Card Section */}
-                <div className="w-full flex items-center justify-center mt-0 sm:mt-[48px]">
+                <div className="card-card w-full flex items-center justify-center mt-0 sm:mt-[48px]">
                     <div className="flex gap-[32px] flex-wrap justify-center">
                         {/* Card 1 */}
                         <div className="custom-card w-[90%] sm:w-[347px] h-[272px] py-[64px] px-[24px] bg-neutralLemon rounded-[8px] flex flex-col justify-between shadow-md mb-4 sm:mb-0">
@@ -185,17 +182,17 @@ const Home = () => {
                 </div>
 
                 {/* Button */}
-                <div className="flex justify-center items-center px-[12px] py-[60px]">
+                <div className="  flex justify-center items-center px-[12px] py-[60px]">
                     <button onClick={() => {
                         inputSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
-                    }} className="custom-button w-[240px] h-[56px] border border-neutralGreen rounded-[8px] text-center text-[16px] tracking-[0.5%] font-[600] text-neutralGreen">
+                    }} className="custom-button  custom-button-div w-[240px] h-[56px] border border-neutralGreen rounded-[8px] text-center text-[16px] tracking-[0.5%] font-[600] text-neutralGreen">
                         Sign up to our waitlist
                     </button>
                 </div>
             </div>
 
             {/* Final Section */}
-            <div className="custom-container h-[420px] bg-gray-100 px-[16px] sm:px-[177.07px] w-full flex items-center justify-center flex-col sm:flex-row">
+            <div className="custom-container h-[420px] bg-neutralSemantic px-[16px] sm:px-[177.07px] w-full flex items-center justify-center flex-col sm:flex-row">
                 <div className="custom-inner-container w-full sm:w-[1085.86px] h-[382px] flex items-center gap-[0] flex-col sm:flex-row">
                     {/* Text Section */}
                     <div className="custom-text-section mobile-text-section w-[80%] sm:w-[480px] h-[174px] mb-[32px] mt-[62px]">
