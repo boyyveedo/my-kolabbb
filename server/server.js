@@ -30,7 +30,6 @@ const PORT = process.env.PORT
 require('dotenv').config();
 
 
-redisClient.connect()
 app.use(express.json())
 app.use(morgan('dev'));
 
