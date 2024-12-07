@@ -4,7 +4,6 @@ const subscriberRoutes = require('./routes/subscribeRoute')
 const cors = require('cors')
 const morgan = require('morgan')
 const logger = require('./logger/index')
-const redisClient = require('./cache/redis')
 const WaitlistSubscriptionValidationMw = require('./validator/subscriber.validator')
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
