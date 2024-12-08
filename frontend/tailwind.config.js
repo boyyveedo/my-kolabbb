@@ -20,14 +20,16 @@ export default {
         'neutralPrimary': '#003930',
         'neutralWhite': '#E6EBEA',
         'neutralLemon': '#EFFF97',
-        'neutralblack': '#1E1E1E',
+        'neutralblack': '#6B8C87',
         'neutralGreen': '#D9FF01',
         'neutralDark': '#3F393B',
         'neutralIndi': '#FBFFE6',
         'neutralHue': '#96AEAA',
-        'neutralLight': '#6B8C87',
+        'neutralLight': '#B3CFCD',
         'neutralSemantic': '#E9EBF8',
         'neutralSema': '#8E98A8',
+        'neutralGray': '#2B5B53',
+        'neutralLEM': '98B301',
 
 
       }

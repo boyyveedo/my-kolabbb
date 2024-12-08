@@ -5,11 +5,11 @@ import Talent from "../assets/Talent.png";
 import Creative from "../assets/Creative.png";
 import Icon from "../assets/Icon.png";
 import { subscribeEmail } from '../Service/api';  // API call to backend
-import { RingLoader } from "react-spinners"; // Importing the loader component
 
 const Home = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [messageType, setMessageType] = useState(''); // 'success' or 'error'
     const [loading, setLoading] = useState(false);  // State to track loading status
     const [isVisible, setIsVisible] = useState(false); // State to handle page transition visibility
     const inputSectionRef = useRef(null);
@@ -22,32 +22,35 @@ const Home = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        if (loading) return; // Prevent multiple submissions
+
         // Check if the email is empty
         if (!email) {
             setMessage('Please enter an email address.');
+            setMessageType('error');
+
             return;
         }
 
         setLoading(true);  // Set loading to true when the user submits the form
+        setMessage('');
+        setMessageType('');
 
         try {
             // Call the subscribeEmail function to subscribe the user
             const response = await subscribeEmail(email);
 
             // Check if the response has a message from the server (in case of success)
-            if (response?.data?.message) {
-                setMessage(response.data.message);  // Show server's success message
-            } else {
-                // Set a custom success message after the subscription
-                setMessage('Thank you for joining our waitlist!');
-            }
 
-            // Clear the email input field after successful subscription
+            setMessage(response.message || 'Thanks for joining our waitlist!.');
+            setMessageType('success');
             setEmail('');
+
 
         } catch (error) {
             // In case of an error, display the error message
-            setMessage(error.message || 'An error occurred. Please try again later.');
+            setMessage(error.message || 'Something went wrong. Please try again.');
+            setMessageType('error');
         } finally {
             setLoading(false);  // Set loading to false once the request is complete
         }
@@ -80,7 +83,7 @@ const Home = () => {
 
                 {/* Description */}
                 <div className="desc w-[507px] h-[72px] absolute top-[542px] left-[467px] text-center">
-                    <h4 className="desc-main font-medium text-[28px] leading-[36px]">
+                    <h4 className="desc-main font-medium text-[28px] leading-[36px] text-neutralblack">
                         Find and collaborate with top creatives
                         for your music <br class="mobile-line-break" />  projects on Kolabbb.
                     </h4>
@@ -127,7 +130,7 @@ const Home = () => {
 
                     {/* Description */}
                     <div className='cus-des'>
-                        <p className="custom-description text-center font-[500]  text-[16px] leading-[24px] tracking-[0.5%] text-white w-[557px] h-[48px]  mt-[2px]">
+                        <p className="custom-description text-center font-[500]  text-[16px] leading-[24px] tracking-[0.5%] text-neutralWhite w-[557px] h-[48px]  mt-[2px]">
                             Streamline every step of your collaboration, from
                             connection to creation. Kolabbb makes it faster,
                             easier, and seamless
@@ -141,12 +144,12 @@ const Home = () => {
                         {/* Card 1 */}
                         <div className="custom-card w-[90%] sm:w-[347px] h-[272px] py-[64px] px-[24px] bg-neutralLemon rounded-[8px] flex flex-col justify-between shadow-md mb-4 sm:mb-0">
                             {/* Subtitle 1 */}
-                            <p className="card-title text-neutralDark font-[600] text-[18px] leading-[26px] text-center">
+                            <p className="card-title text-neutralPrimary font-[600] text-[18px] leading-[26px] text-center">
                                 Redefining convenience and efficiency for talent
                             </p>
 
                             {/* Body 1 */}
-                            <p className="card-body text-neutralblack font-[500] text-[14px] tracking-[0.25%] leading-[20px] text-center text-sm">
+                            <p className="card-body text-neutralGray font-[500] text-[14px] tracking-[0.25%] leading-[20px] text-center text-sm">
                                 Collaborate with industry heavyweights who
                                 provide the perfect creative direction
                                 to propel your music career to success.
@@ -156,12 +159,12 @@ const Home = () => {
                         {/* Card 2 */}
                         <div className="custom-card w-[90%] sm:w-[347px] h-[272px] py-[64px] px-[24px] bg-neutralLemon rounded-[8px] flex flex-col justify-between shadow-md mb-4 sm:mb-0">
                             {/* Subtitle 1 */}
-                            <p className="card-title text-neutralDark font-[600] text-[18px] tracking-[0.8%] leading-[26px] text-center">
+                            <p className="card-title text-neutralPrimary font-[600] text-[18px] tracking-[0.8%] leading-[26px] text-center">
                                 Scale your music with the best creatives on Kolabbb
                             </p>
 
                             {/* Body 1 */}
-                            <p className="card-body text-neutralblack font-[500] text-[14px] tracking-[0.25%] pt-[32px] leading-[20px] text-center text-sm">
+                            <p className="card-body text-neutralGray font-[500] text-[14px] tracking-[0.25%] pt-[32px] leading-[20px] text-center text-sm">
                                 Partner with the best creatives who bring the right vision and expertise to help elevate your music and propel your career toward success.
                             </p>
                         </div>
@@ -169,12 +172,12 @@ const Home = () => {
                         {/* Card 3 */}
                         <div className="custom-card w-[90%] sm:w-[347px] h-[272px] py-[64px] px-[24px] bg-neutralLemon rounded-[8px] flex flex-col justify-between shadow-md">
                             {/* Subtitle 1 */}
-                            <p className="card-title text-neutralDark font-[600] text-[18px] h-[52px] w-full tracking-[0.8%] leading-[26px] text-center mx-auto">
+                            <p className="card-title text-neutralPrimary font-[600] text-[18px] h-[52px] w-full tracking-[0.8%] leading-[26px] text-center mx-auto">
                                 Easy access to <br /> all creatives
                             </p>
 
                             {/* Body 1 */}
-                            <p className="card-body text-neutralblack font-[500] text-[14px] tracking-[0.25%] leading-[20px] text-center text-sm h-[60px] w-full mx-auto">
+                            <p className="card-body text-neutralGray font-[500] text-[14px] tracking-[0.25%] leading-[20px] text-center text-sm h-[60px] w-full mx-auto">
                                 Kolabbb simplifies the process, connecting you directly with top talent—no third parties, just seamless collaboration.
                             </p>
                         </div>
@@ -250,15 +253,15 @@ const Home = () => {
             </div>
 
             {/* Final Section */}
-            <div className="mobile-container h-[420px] bg-neutralPrimary py-[64px] gap-[24px] w-full flex flex-col items-center justify-around">
+            <div className="mobile-container h-[450px] bg-neutralPrimary py-[30px] gap-[24px] w-full flex flex-col items-center justify-around">
                 {/* Inner container */}
-                <div className="inner-content w-[80%] sm:w-[659px] h-[204px] gap-[16px] flex flex-col items-center">
-                    <h2 className="main-heading text-white font-[600]  text-[32px] sm:text-[48px] w-full sm:w-[659px] h-[116px] leading-[58px] text-center">
+                <div className="inner-content w-[80%] sm:w-[659px] h-[204px] gap-[1px] flex flex-col items-center">
+                    <h2 className="main-heading text-white font-[600] mt-[30px]  text-[32px] sm:text-[48px] w-full sm:w-[659px] h-[116px] leading-[58px] text-center">
                         Join us on this creative journey
                     </h2>
 
                     <div className="description w-[80%] mb-[40px] sm:w-[357px] h-[72px]">
-                        <p className="description-text text-neutralWhite font-[500]   text-[14px] sm:text-[16px] leading-[24px] text-center tracking-[0.5%]">
+                        <p className="description-text mt-[30px] text-neutralWhite font-[500]   text-[14px] sm:text-[16px] leading-[28px] text-center tracking-[0.5%]">
                             Join our waitlist as creative or a musical talent
                             and be the first to know when we launch.<br />
                             Stand a chance to win a prize on launch day.
@@ -277,27 +280,41 @@ const Home = () => {
                             placeholder=" Enter email address"
                             onChange={(e) => setEmail(e.target.value)}
                             required
-                            className="  input input-field w-full sm:w-[856px] h-[64px] rounded-[8px] px-[12px] py-[16px] border-none bg-neutralIndi text-neutralHue"
+                            className="  input input-field w-full sm:w-[856px] h-[64px] border-2 border-gray-300 p-2 rounded-[8px] focus:outline-none focus:border-neutralGreen  px-[12px] py-[16px]  bg-neutralIndi text-neutralPrimary"
                         />
+
+                        <button
+                            type="submit"
+                            className="action-button w-full sm:w-[196px] h-[64px] border-neutralGreen rounded-[8px] border-[1px] px-[12px] py-[16px] text-neutralLemon bg-neutralPrimary mt-4 sm:mt-0 flex items-center justify-center"
+                            disabled={loading} // Disable button when loading
+                        >
+                            {loading ? (
+                                <span className="loading-spinner"></span>  // Spinner while loading
+                            ) : (
+                                "Join the Waitlist"  // Button text when not loading
+                            )}
+                        </button>
 
                     </form>
                     {/* Button with loader */}
-                    <button
-                        type="submit"
-                        className="action-button w-full sm:w-[196px] h-[64px] border-neutralGreen rounded-[8px] border-[1px] px-[12px] py-[16px] text-neutralLemon bg-neutralPrimary mt-4 sm:mt-0 flex items-center justify-center"
-                        disabled={loading} // Disable button when loading
-                    >
-                        {loading ? (
-                            <RingLoader color="#ffffff" size={30} />  // Spinner will appear centered
-                        ) : (
-                            "Join the Waitlist"  // Button text when not loading
-                        )}
-                    </button>
+
                     <div className="message-container w-full flex justify-center mt-2">
-                        {message && <p className="text-center text-neutralLemon">{message}</p>}
+                        {message && (
+                            <p
+                                className={`text-center  ${messageType === 'error' ? 'text-red-600' : 'text-green-600'
+                                    } 
+        text-sm sm:text-base md:text-lg
+        p-2 w-full sm:w-auto max-w-md`}  // Ensure max width for desktop
+                            >
+                                {message}
+                            </p>
+                        )}
                     </div>
 
                 </div>
+
+
+
 
             </div>
 

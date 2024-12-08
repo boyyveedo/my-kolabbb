@@ -29,15 +29,14 @@ const Navbar = () => {
 
     return (
         <div
-            className={`w-full ${isSticky ? 'top-0 shadow-md z-50' : ''} ${isMenuOpen ? 'bg-neutralIndi' : 'bg-neutralSemantic'
-                }`}
+            className={`w-full ${isSticky ? 'top-0 shadow-md z-50' : ''} ${isMenuOpen ? 'bg-neutralIndi' : 'bg-neutralSemantic'}`}
         >
             {/* Navbar */}
             <header
                 className="max-w-[1440px] w-full h-[104px] flex justify-between items-center px-4 md:px-12 lg:px-[72px] mx-auto"
             >
                 {/* Logo */}
-                <div className="w-[110.5px] h-[25.12px]">
+                <div className={`w-[110.5px] h-[25.12px] ${isMenuOpen ? 'hidden' : ''}`}>
                     <a href="#">
                         <img src={Logo} alt="Logo" />
                     </a>
@@ -54,7 +53,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Menu Button */}
-                <div className="lg:hidden">
+                <div className="lg:hidden flex justify-end w-full">
                     <button
                         onClick={toggleMenu}
                         className="text-gray-500 focus:outline-none focus:text-gray-300"
@@ -69,8 +68,11 @@ const Navbar = () => {
             </header>
 
             {/* Mobile Menu */}
-            {isMenuOpen && (
-                <div className="absolute top-[104px] left-0 w-full h-[290px]  bg-neutralIndi z-50 shadow-lg">
+            <div
+                className={`absolute left-0 w-full h-[290px] bg-neutralIndi z-50 shadow-lg transition-all duration-500 ${isMenuOpen ? 'top-[104px]' : '-top-[300px]' // Menu drops from top when open
+                    }`}
+            >
+                {isMenuOpen && (
                     <ul className="flex flex-col items-center py-6">
                         <li className="py-2">
                             <button
@@ -84,8 +86,8 @@ const Navbar = () => {
                             </button>
                         </li>
                     </ul>
-                </div>
-            )}
+                )}
+            </div>
         </div>
     );
 };

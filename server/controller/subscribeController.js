@@ -30,7 +30,7 @@ const subscribe = async (req, res) => {
         logger.info(`Confirmation email sent to: ${email}`);
 
 
-        res.status(201).json({ message: 'Successfully subscribed! Please check your email for confirmation.' });
+        res.status(201).json({ message: 'Thanks for joining our waitlist!' });
 
     } catch (error) {
         logger.error('Error during subscription:', error);
