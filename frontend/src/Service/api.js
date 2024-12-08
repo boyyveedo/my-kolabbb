@@ -1,5 +1,5 @@
 const apiUrl = import.meta.env.VITE_API_URL;
-console.log(apiUrl); // Should log your API URL from .env
+console.log(apiUrl);
 
 export const subscribeEmail = async (email) => {
     const url = `${apiUrl}/api/v1/waitlist`;
