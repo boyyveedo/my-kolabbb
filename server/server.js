@@ -19,7 +19,7 @@ app.use(helmet());
 
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://kolabbb.com',
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: 'Content-Type,Authorization',
 }));
