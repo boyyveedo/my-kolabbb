@@ -129,20 +129,18 @@ const Home = () => {
                     </h2>
 
                     {/* Description */}
-                    <div className='cus-des'>
-                        <p className="custom-description text-center font-[500]  text-[16px] leading-[24px] tracking-[0.5%] text-neutralWhite w-[557px] h-[48px]  mt-[2px]">
-                            Streamline every step of your collaboration, from
-                            connection to creation. Kolabbb makes it faster,
-                            easier, and seamless
-                        </p>
-                    </div>
+                    <p className="custom-description text-center font-[500]  text-[16px] leading-[24px] tracking-[0.5%] text-neutralWhite w-[557px] h-[48px]  mt-[2px]">
+                        Streamline every step of your collaboration, from
+                        connection to creation. Kolabbb makes it faster,
+                        easier, and seamless
+                    </p>
                 </div>
 
                 {/* Card Section */}
                 <div className="card-card w-full flex items-center justify-center mt-0 sm:mt-[48px]">
                     <div className="flex gap-[32px] flex-wrap justify-center">
                         {/* Card 1 */}
-                        <div className="custom-card w-[90%] sm:w-[347px] h-[272px] py-[64px] px-[24px] bg-neutralLemon rounded-[8px] flex flex-col justify-between shadow-md mb-4 sm:mb-0">
+                        <div className="custom-card mobile-card w-[90%] sm:w-[347px] h-[272px] py-[64px] px-[24px] bg-neutralLemon rounded-[8px] flex flex-col justify-between shadow-md">
                             {/* Subtitle 1 */}
                             <p className="card-title text-neutralPrimary font-[600] text-[18px] leading-[26px] text-center">
                                 Redefining convenience and efficiency for talent
@@ -157,18 +155,17 @@ const Home = () => {
                         </div>
 
                         {/* Card 2 */}
-                        <div className="custom-card w-[90%] sm:w-[347px] h-[272px] py-[64px] px-[24px] bg-neutralLemon rounded-[8px] flex flex-col justify-between shadow-md mb-4 sm:mb-0">
+                        <div className="custom-card mobile-card w-[90%] sm:w-[347px] h-[272px] py-[64px] px-[24px] bg-neutralLemon rounded-[8px] flex flex-col justify-between shadow-md ">
                             {/* Subtitle 1 */}
-                            <p className="card-title text-neutralPrimary font-[600] text-[18px] tracking-[0.8%] leading-[26px] text-center">
+                            <p className="card-title text-neutralPrimary font-[600] text-[18px] leading-[26px] text-center">
                                 Scale your music with the best creatives on Kolabbb
                             </p>
 
                             {/* Body 1 */}
-                            <p className="card-body text-neutralGray font-[500] text-[14px] tracking-[0.25%] pt-[32px] leading-[20px] text-center text-sm">
+                            <p className="card-body text-neutralGray font-[500] text-[14px] tracking-[0.25%] leading-[20px] text-center text-sm">
                                 Partner with the best creatives who bring the right vision and expertise to help elevate your music and propel your career toward success.
                             </p>
                         </div>
-
                         {/* Card 3 */}
                         <div className="custom-card w-[90%] sm:w-[347px] h-[272px] py-[64px] px-[24px] bg-neutralLemon rounded-[8px] flex flex-col justify-between shadow-md">
                             {/* Subtitle 1 */}
@@ -255,25 +252,23 @@ const Home = () => {
             {/* Final Section */}
             <div className="mobile-container h-[450px] bg-neutralPrimary py-[30px] gap-[24px] w-full flex flex-col items-center justify-around">
                 {/* Inner container */}
-                <div className="inner-content w-[80%] sm:w-[659px] h-[204px] gap-[1px] flex flex-col items-center">
-                    <h2 className="main-heading text-white font-[600] mt-[30px]  text-[32px] sm:text-[48px] w-full sm:w-[659px] h-[116px] leading-[58px] text-center">
+                <div className="inner-content w-[659px]  h-[146px] gap-[16px]  flex flex-col items-center">
+                    <h2 className="main-heading text-white font-[600] pt-[20px]  text-[48px]  w-full  h-[116px] leading-[58px] text-center">
                         Join us on this creative journey
                     </h2>
 
-                    <div className="description w-[80%] mb-[40px] sm:w-[357px] h-[72px]">
-                        <p className="description-text mt-[30px] text-neutralWhite font-[500]   text-[14px] sm:text-[16px] leading-[28px] text-center tracking-[0.5%]">
-                            Join our waitlist as creative or a musical talent
-                            and be the first to know when we launch.<br />
-                            Stand a chance to win a prize on launch day.
-                        </p>
-                    </div>
+                    <h1 className="sub-head w-[659px] text-neutralWhite font-[500]  text-[16px] leading-[24px] text-center tracking-[0.5%] ">
+                        Join Our Waitlist as a Creative or Musical Talent. Be the first to
+                        experience Kolabbb when we launch and stand a chance
+                        to win an exclusive prize on launch day.
+                    </h1>
                 </div>
 
                 {/* Input and Button Section */}
-                <div ref={inputSectionRef} id="waitlist-input" className=" input-button-section flex items-center gap-[16px] mt-[7px] flex-wrap justify-center">
+                <div ref={inputSectionRef} className="waitlist  flex items-center gap-[10px] mt-[-80px] flex-wrap justify-center">
                     {/* Input Field */}
                     <form noValidate  // Prevent default form validation
-                        onSubmit={handleSubmit} className='className="w-full  flex flex-col sm:flex-row gap-4 sm:gap-6'>
+                        onSubmit={handleSubmit} className='className="w-full input-div  flex flex-col sm:flex-row gap-4 sm:gap-6'>
                         <input
                             type="email"
                             value={email}

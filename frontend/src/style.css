@@ -1,3 +1,6 @@
+
+
+
 .hero-container {
     display: flex;
     justify-content: center;
@@ -128,17 +131,21 @@
 
     
     .custom-subtitle{
-        font-size: 16px; /* Adjust font size for mobile */
+        font-size: 18px; /* Adjust font size for mobile */
         line-height: 26px; /* Adjust line height */
-        width: 100%; 
+        width: 340px; 
+        height: 52px;
+        font-weight: 600;
+        letter: 0.8%;
     }
 
 .custom-description{
 font-size: 14px;
 width: 340px;
-line-height: 24px; /* Adjust line height */
+line-height: 20px; /* Adjust line height */
 height: 60px;
 font-weight: 500px;
+letter: 0.25%;
 }
 
 .custom-title{
@@ -154,9 +161,15 @@ font-size: 12px;
 }
    
 .card-div{
-height: 1050px;
+height: 1000px;
 }
 
+
+.mobile-card{
+        margin-bottom: -50px; /* Reduced space between cards on mobile */
+
+
+}
 .custom-button {
     margin-top: -30px; /* Negative margin to move the button further up */
 }
@@ -352,48 +365,83 @@ height: 1050px;
         letter-spacing: 0.8%; /* Set letter spacing */
     }
 
-    .mobile-container {
-        height: auto; /* Adjust for better fitting on small screens */
-        padding: 32px 16px; /* Adjust padding */
-    }
-
-    .inner-content {
-        width: 100%; /* Full width for smaller screens */
-    }
-
-    .main-heading {
-        font-size: 24px; /* Adjust font size */
-        line-height: 32px; /* Adjust line height */
-    }
-
-    .description {
-        width: 100%; /* Full width for better fitting */
-        
-    }
-
-    .description-text {
-        font-size: 12px; /* Adjust text size */
-        line-height: 20px; /* Adjust line height */
-    }
-
-    .input-field {
-width: 298px
-    }
-
+.mobile-container{
+    height:384px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    width: full;
+    display: flex;
+   flex-direction: column; 
+   align-items: center; 
     
 
+} 
+
+.inner-content{
+width: 228px; /* Fixed width */
+  height: 184px; /* Fixed height */
+  gap: 42px; /* Increased gap between elements */
+  flex-direction: column;
+  align-items: center;
+  margin-top: -100px; /* Negative margin to move the content up */
+
+}
+
+.main-heading{
+width: 300px;
+height: 52px;
+font-size: 18px;
+font-weight: semi-bold;
+text-align: center;
+line-height: 26px;
+    white-space: pre-line; /* Respect line breaks without <br> */
+
+}
+
+.sub-head{
+width: 228px;
+height: 100px;
+padding-bottom: 10px;
+font-size: 14px;
+font-weight: 500px;
+line-height: 20px;
+letter: 0.25%;
+
+}
+
+
+
+.waitlist{
+display: flex;
+  align-items: center;
+  margin-top: -150px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.input-div{
+width: 298px;
+height: 48px;
+border-radius: 4px;
+padding: 16px 12px;
+ display: flex;
+flex-direction: column; 
+align-items: center; 
+
+}
+
+.action-button{
+width: 139px;
+height: 32px;
+border-radius: 4px;
+padding: 10px 8px;
+}
+
+
     
-    .action-button {
-        width: 100%; /* Full width button */
-        height: 50px; /* Adjust button height */
-        margin-top: 16px; /* Adjust top margin */
-    }
-
-    .input-button-section {
-        gap: 16px; /* Adjust spacing */
-        flex-wrap: wrap; /* Ensure items wrap */
-    }
-
+    
  .hero{
     height: 360px;
   
@@ -724,10 +772,3 @@ width: 298px
         font-size: 12px;
     }
 }
-
-
-
-
-
-
-
