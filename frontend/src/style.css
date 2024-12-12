@@ -256,7 +256,7 @@ height: 970px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 65.53px; /* Full width for mobile */
+    width: 80.53px; /* Full width for mobile */
 }
 
 .custom-image-container2 {
@@ -268,7 +268,7 @@ height: 970px;
 .custom-image {
     width: 100%;
     height: 100px; /* Adjusted height for mobile */
-    border-radius: 10.15px;
+    border-radius: 3px;
     overflow: hidden;
     margin-bottom: 10px; /* Adjusted spacing */
 }
@@ -451,6 +451,7 @@ height: 48px;
 border-radius: 4px;
 padding: 10px 8px;
 margin-top: 15px;
+text-weight: 700px;
 }
 
 

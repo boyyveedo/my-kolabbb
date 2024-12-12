@@ -275,7 +275,7 @@ const Home = () => {
                             placeholder=" Enter email address"
                             onChange={(e) => setEmail(e.target.value)}
                             required
-                            className="  input input-field w-full sm:w-[856px] h-[64px] border-2  p-2 rounded-[8px] focus:outline-none focus:border-neutralGreen  px-[12px] py-[16px]  bg-neutralIndi text-neutralPrimary"
+                            className="  input input-field w-full sm:w-[856px] h-[64px] border-2 p-2 rounded-[8px] focus:outline-none focus:border-neutralGreen  px-[12px] py-[16px]  bg-neutralIndi text-neutralPrimary"
                         />
 
                         <button
