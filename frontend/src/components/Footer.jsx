@@ -15,12 +15,12 @@ const Footer = () => {
             {/* Links */}
             <div className="flex  justify-between gap-[48px] pb-[40px] footer-links">
                 <a href="/terms" className="hover:underline footer-link">
-                    <h5 className="font-semibold text-[24px] leading-[32px]">
+                    <h5 className="text-neutralPrimary font-semibold text-[24px] leading-[32px]">
                         Terms and Conditions
                     </h5>
                 </a>
                 <a href="/privacy" className="hover:underline footer-link">
-                    <h5 className="font-semibold text-[24px] leading-[32px]">
+                    <h5 className="text-neutralPrimary font-semibold text-[24px] leading-[32px]">
                         Privacy Policy
                     </h5>
                 </a>

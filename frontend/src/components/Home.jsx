@@ -186,7 +186,7 @@ const Home = () => {
                     <button onClick={() => {
                         inputSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
                     }} className="custom-button  custom-button-div w-[240px] h-[56px] border border-neutralGreen rounded-[8px] text-center text-[16px] tracking-[0.5%] font-[600] text-neutralGreen">
-                        Sign up to our waitlist
+                        Sign Up To Our Waitlist
                     </button>
                 </div>
             </div>
@@ -265,7 +265,7 @@ const Home = () => {
                 </div>
 
                 {/* Input and Button Section */}
-                <div ref={inputSectionRef} className="waitlist  flex items-center gap-[10px] mt-[-80px] flex-wrap justify-center">
+                <div ref={inputSectionRef} id="waitlist-input" className="waitlist  flex items-center gap-[10px] mt-[-80px] flex-wrap justify-center">
                     {/* Input Field */}
                     <form noValidate  // Prevent default form validation
                         onSubmit={handleSubmit} className='className="w-full input-div  flex flex-col sm:flex-row gap-4 sm:gap-6'>
@@ -275,7 +275,7 @@ const Home = () => {
                             placeholder=" Enter email address"
                             onChange={(e) => setEmail(e.target.value)}
                             required
-                            className="  input input-field w-full sm:w-[856px] h-[64px] border-2 border-gray-300 p-2 rounded-[8px] focus:outline-none focus:border-neutralGreen  px-[12px] py-[16px]  bg-neutralIndi text-neutralPrimary"
+                            className="  input input-field w-full sm:w-[856px] h-[64px] border-2  p-2 rounded-[8px] focus:outline-none focus:border-neutralGreen  px-[12px] py-[16px]  bg-neutralIndi text-neutralPrimary"
                         />
 
                         <button

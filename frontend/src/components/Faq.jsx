@@ -29,7 +29,7 @@ const Faq = () => {
 
     return (
         <div className="w-full h-auto flex flex-col items-center justify-center gap-[32px] pt-[20px] pb-[74px] px-4 sm:px-0 bg-neutralSemantic">
-            <h2 className="font-[600] text-[32px] sm:text-[48px] leading-[40px] sm:leading-[58px] text-center mb-2 h-[58px]">
+            <h2 className="font-[600] text-[32px] sm:text-[48px] leading-[40px] sm:leading-[58px] text-center mb-2 h-[58px] text-neutralPrimary">
                 FAQs
             </h2>
             <div className="w-full sm:w-[1076px] max-w-full h-auto space-y-[32px] sm:space-y-[64px] items-center">

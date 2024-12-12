@@ -17,6 +17,12 @@ const Navbar = () => {
         element?.scrollIntoView({ behavior: 'smooth' });
     };
 
+    // Scroll and close the menu
+    const handleJoinWaitlist = () => {
+        scrollToInput();   // Scroll to the input section
+        setIsMenuOpen(false);   // Close the mobile menu
+    };
+
     useEffect(() => {
         const handleScroll = () => {
             setIsSticky(window.scrollY > 100);
@@ -76,10 +82,7 @@ const Navbar = () => {
                     <ul className="flex flex-col items-center py-6">
                         <li className="py-2">
                             <button
-                                onClick={() => {
-                                    scrollToInput();
-                                    toggleMenu();
-                                }}
+                                onClick={handleJoinWaitlist} // Now handles both actions
                                 className="bg-neutralPrimary mt-[80px] text-white px-6 py-3 rounded-md"
                             >
                                 Join the Waitlist
@@ -93,14 +96,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
-
-
-
-
-
-
-
-

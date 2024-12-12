@@ -71,7 +71,7 @@
 
     .text-content-main{
     font-weight: bold;
-    color: #2b2b2b; /* text-neutralPrimary */
+    color: #003930;
     font-size: 20px;
     align-items: center;
     height: 84px;
@@ -110,9 +110,10 @@
     radius: 6.58px;
 
     }
-
-    .btn-main{
-  padding: 13.16px 9.87px;
+ .btn-main{
+padding: 13.16px 9.87px;
+width:148px;
+height: 48px;
     
     }
    
@@ -150,19 +151,25 @@ letter: 0.25%;
 
 .custom-title{
 font-size: 12px;
-    margin-top: -30px; /* Negative margin to move the button further up */
+    margin-top: -40px; /* Negative margin to move the button further up */
     font-weight: 600px;
 
 }
 
 .card-card{
-    margin-top: -50px; /* Negative margin to move the button further up */
+    margin-top: -70px; /* Negative margin to move the button further up */
 
 }
    
 .card-div{
-height: 1000px;
+height: 970px;
 }
+
+.div-2{
+    margin: 0 auto;
+    
+}
+
 
 
 .mobile-card{
@@ -170,9 +177,7 @@ height: 1000px;
 
 
 }
-.custom-button {
-    margin-top: -30px; /* Negative margin to move the button further up */
-}
+
     
 
     .custom-section .gap-reduced {
@@ -187,9 +192,11 @@ height: 1000px;
     }
 
     .custom-button {
-        width: 200px; /* Adjust button width */
+        margin-top: -30px;
+        width: 188px; /* Adjust button width */
         height: 48px; /* Adjust button height */
         font-size: 14px; /* Adjust button text size */
+        padding: 24px auto;
     }
 
     .card-title {
@@ -297,10 +304,6 @@ height: 1000px;
 }
 
 
-.main-heading{
-    padding: 32px 16px;
-}
-
 .cus-des{
     width:340px;
     height: 60px;
@@ -363,10 +366,15 @@ height: 1000px;
         font-size: 18px; /* Set font size */
         line-height: 26px; /* Set line height */
         letter-spacing: 0.8%; /* Set letter spacing */
+        color: #003930;
     }
 
+.custom-label{
+    color: #003930;
+}
+
 .mobile-container{
-    height:384px;
+    height:394px;
     padding-top: 24px;
     padding-bottom: 24px;
     display: flex;
@@ -381,11 +389,15 @@ height: 1000px;
 .inner-content{
 width: 228px; /* Fixed width */
   height: 184px; /* Fixed height */
-  gap: 42px; /* Increased gap between elements */
   flex-direction: column;
   align-items: center;
-  margin-top: -100px; /* Negative margin to move the content up */
+  margin-bottom: 150px; /* Negative margin to move the content up */
+ 
 
+}
+
+.input{
+    box-sizing: border-box;
 }
 
 .main-heading{
@@ -395,7 +407,7 @@ font-size: 18px;
 font-weight: semi-bold;
 text-align: center;
 line-height: 26px;
-    white-space: pre-line; /* Respect line breaks without <br> */
+
 
 }
 
@@ -415,9 +427,10 @@ letter: 0.25%;
 .waitlist{
 display: flex;
   align-items: center;
-  margin-top: -150px;
+position : absolute;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 120px;
 
 }
 
@@ -433,10 +446,11 @@ align-items: center;
 }
 
 .action-button{
-width: 139px;
-height: 32px;
+width: 148px;
+height: 48px;
 border-radius: 4px;
 padding: 10px 8px;
+margin-top: 15px;
 }
 
 
