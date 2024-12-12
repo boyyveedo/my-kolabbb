@@ -83,7 +83,7 @@ const Navbar = () => {
                         <li className="py-2">
                             <button
                                 onClick={handleJoinWaitlist} // Now handles both actions
-                                className="bg-neutralPrimary mt-[80px] text-white px-6 py-3 rounded-md"
+                                className="bg-neutralPrimary mt-[80px] text-white px-auto py-auto rounded-md w-[148px] h-[48px]"
                             >
                                 Join the Waitlist
                             </button>
